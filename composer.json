@@ -1,0 +1,17 @@
+{
+    "name": "mieproject/settings",
+    "description": "MIE Ptoject - settings packge",
+    "type": "project",
+    "license": "MIT",
+    "authors": [],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MieProject\\Settings\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {}
+}
