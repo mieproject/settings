@@ -113,6 +113,11 @@
     </script>
 @endpush
 @push('css')
+    <style>
+        code{
+            background: #fefe; font-size: 9px;
+        }
+    </style>
     <!-- include summernote css/js -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
 @endpush

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" />
 <div class="form-group {{ $errors->has($field['name']) ? ' has-error' : '' }}">
-    <label for="{{ $field['name'] }}">{{ $field['label'] }}</label>
+    <label for="{{ $field['name'] }}">{{ $field['label'] }} <CODE>{{ "{{ setting(".$field['name'].") }"."}" }}</CODE> </label><br>
     @php($name = time() )
     @if(isset($field['data']) and $field['data'] == 'json' and is_array(setting($field['name'])))
         @if(setting($field['name']) != null || isset($field['value']))

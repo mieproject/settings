@@ -1,5 +1,5 @@
 <div class="form-group {{ $errors->has($field['name']) ? ' has-error' : '' }}">
-    <label for="{{ $field['name'] }}">{{ $field['label'] }}</label>
+    <label for="{{ $field['name'] }}">{{ $field['label'] }}</label> <CODE>{{ "{{ setting(".$field['name'].") }"."}" }}</CODE>
     <select name="{{ $field['name'] }}" class="form-control {{ Arr::get( $field, 'class') }}" id="{{ $field['name'] }}">
         @foreach(Arr::get($field, 'options', []) as $val => $label)
             <option @if( old($field['name'], \setting($field['name'])) == $val ) selected  @endif value="{{ $val }}">{{ $label }}</option>

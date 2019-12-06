@@ -1,5 +1,5 @@
 <div class="form-group  @if(isset($fields['row'])) {{ $field['col'] ?? 'col' }} @endif {{ $errors->has($field['name']) ? ' has-error' : '' }}">
-    <label for="{{ $field['name'] }}">{{ $field['label'] }}</label>
+    <label for="{{ $field['name'] }}">{{ $field['label'] }} </label> <CODE> {{ "{{ setting(".$field['name'].") }"."}" }}</CODE>
     <textarea type="{{ $field['type'] }}"
            name="{{ $field['name'] }}" rows="4"
            class="form-control  {{ Arr::get( $field, 'class') }}"
