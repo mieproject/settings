@@ -4,7 +4,7 @@
     "type": "package",
     "license": "MIT",
     "authors": [],
-    "minimum-stability": "dev",
+
     "autoload": {
         "psr-4": {
             "MieProject\\Settings\\": "src/"
