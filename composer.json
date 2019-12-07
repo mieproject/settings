@@ -4,7 +4,6 @@
     "type": "package",
     "license": "MIT",
     "authors": [],
-
     "autoload": {
         "psr-4": {
             "MieProject\\Settings\\": "src/"
@@ -13,5 +12,10 @@
             "src/helpers.php"
         ]
     },
-    "require": {}
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
