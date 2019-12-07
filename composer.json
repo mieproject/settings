@@ -12,6 +12,22 @@
             "src/helpers.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MieProject\\Settings\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MieProject\\Settings\\SettingsServiceProvider"
+            ]
+        }
+    },
     "config": {
         "preferred-install": "dist"
     },
