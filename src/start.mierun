@@ -1,2 +1,2 @@
-php artisan breeze:install vue
+php artisan breeze:install bootstrap
 npm install && npm run dev
