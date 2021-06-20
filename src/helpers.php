@@ -1,17 +1,27 @@
 <?php
 
 use Illuminate\Support\Str;
+use MieProject\Settings\Models\Setting;
 
 
-if (! function_exists('setting')) {
-    function setting($key, $default = null){
+if (!function_exists('setting')) {
+
+    function setting($key, $lang = null, $default = null)
+    {
         if (is_null($key)) {
-            return new MieProject\Settings\Models\Setting();
+            return new Setting();
         }
+
         if (is_array($key)) {
-            return MieProject\Settings\Models\Setting::setByKey($key[0], $key[1]);
+            return Setting::set($key[0], $key[1]);
         }
-        $value = MieProject\Settings\Models\Setting::getByKey($key); // ""
+
+        if ($lang != null) {
+            $value = Setting::get($key, $lang);
+        } else {
+            $value = Setting::get($key);
+        }
+
         return is_null($value) ? value($default) : $value;
     }
 }
