@@ -26,10 +26,10 @@ class SettingsServiceProvider extends ServiceProvider
         require_once __DIR__ . '/helpers.php';
 
         $this->publishes([
-            __DIR__.'\config\setting_fields.php' => config_path('setting_fields.php'),
+            __DIR__.'/config/setting_fields.php' => config_path('setting_fields.php'),
         ]);
         $this->mergeConfigFrom(
-            __DIR__.'\config\setting_fields.php' , 'setting_fields'
+            __DIR__.'/config/setting_fields.php' , 'setting_fields'
         );
 
         $this->loadViewsFrom(__DIR__.'/views', 'MIEsetting');
