@@ -1,1 +1,2 @@
 php artisan breeze:install vue
+npm install && npm run dev
