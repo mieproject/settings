@@ -12,7 +12,7 @@ class SettingController extends Controller
 {
 
     public function index(){
-        return view('MIEsetting::admin.setting.setting');
+        return view('MIEsetting::admin.setting.index');
     }
 
     public function store(Request $request)

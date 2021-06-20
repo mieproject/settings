@@ -1,1 +1,1 @@
-@include('MIEsetting::admin.setting.fields._text')
+@include('dashboard.setting.fields._text')
