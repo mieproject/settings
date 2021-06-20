@@ -8,7 +8,7 @@
             <input type="{{ $field['type'] }}"
                    name="{{ $name }}"
                    value="{{ old($field['name'].'.'.$lang, \setting($field['name'],$lang)) }}"
-                   class="form-control @if($lang == 'ar') rtl text-right @endif {{ array_get( $field, 'class') }}"
+                   class="form-control @if($lang == 'ar') rtl text-right @endif {{ Arr::get( $field, 'class') }}"
                    id="{{ $name }}"
                    placeholder="{{ $label }}">
 
@@ -22,7 +22,7 @@
         <input type="{{ $field['type'] }}"
                name="{{ $field['name'] }}"
                value="{{ old($field['name'], \setting($field['name'])) }}"
-               class="form-control {{ array_get( $field, 'class') }}"
+               class="form-control {{ Arr::get( $field, 'class') }}"
                id="{{ $field['name'] }}"
                placeholder="{{ $field['label'] }}">
 

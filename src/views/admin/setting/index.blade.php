@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-content">
 
-                        <h4 class="card-title"><i class="material-icons small">{{ array_get($fields, 'icon', 'drag_handle') }}</i> {{ $fields['title'] }}</h4>
+                        <h4 class="card-title"><i class="material-icons small">{{ Arr::get($fields, 'icon', 'drag_handle') }}</i> {{ $fields['title'] }}</h4>
                         <p>{{ $fields['desc'] }}</p>
                         <div class="row">
                             @if(isset($fields['row']))
@@ -70,7 +70,7 @@
 
     <script>
         Dropzone.autoDiscover = false;
-        var $logoPath = "{{ assetV2('uploads/logo/') }}/";
+        var $logoPath = "{{ asset('uploads/logo/') }}/";
         $("div.logo").each(function (index, el) {
             let _el = el
             $(el).dropzone({
@@ -92,26 +92,7 @@
         })
 
 
-        {{--var $sliderPath = "{{ assetV2('uploads/slider/') }}/";--}}
-        {{--var slideArray = [];--}}
-        {{--slideArray.push($('input[name="'+$('div.slider').data('name')+'"]').val());--}}
-        {{--$("div.slider").dropzone({--}}
-        {{--    url: "/file/slider/" + $('div.slider').data('name'),--}}
-        {{--    renameFilename: function (filename) {--}}
-        {{--        return $('div.slider').data('filename') + '_' + filename;--}}
-        {{--    },--}}
-        {{--    init: function () {--}}
-        {{--        this.on('addedfile', function (file) {--}}
-        {{--            slideArray.push($sliderPath+file.upload.filename);--}}
-        {{--        });--}}
-        {{--        this.on("complete", function (file) {--}}
-        {{--            var filtered = slideArray.filter(function (el) {--}}
-        {{--                return el;--}}
-        {{--            });--}}
-        {{--            $('input[name="'+$('div.slider').data('name')+'"]').val(filtered);--}}
-        {{--        });--}}
-        {{--    },--}}
-        {{--});--}}
+
         $(document).ready(function () {
             $('textarea').summernote();
             // $('textarea[name="app_map"]').summernote('codeview.toggle');

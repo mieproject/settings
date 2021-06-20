@@ -44,17 +44,17 @@
                 </script>
             @endpush
         @endif
-            <div class="dropzone text-center {{ array_get( $field, 'class') }}"
+            <div class="dropzone text-center {{ Arr::get( $field, 'class') }}"
                  data-name="{{ $field['name'] }}" data-filename="{{ $name }}">
             </div>
             <input type="hidden"
                    name="{{ $field['name'] }}"
                    value="{{ old(json_encode($field['value']),  implode(',',$arr)) }}"
-                   class="form-control {{ array_get( $field, 'class') }}"
+                   class="form-control {{ Arr::get( $field, 'class') }}"
                    id="{{ $field['name'] }}"
                    placeholder="{{ $field['label'] }}">
     @else
-        <div class="dropzone text-center {{ array_get( $field, 'class') }}" data-name="{{ $field['name'] }}" data-filename="{{ $name }}">
+        <div class="dropzone text-center {{ Arr::get( $field, 'class') }}" data-name="{{ $field['name'] }}" data-filename="{{ $name }}">
             @if(setting($field['name']) != null || isset($field['value']))
                 <img src="{{setting($field['name']) ?? $field['value']}}" onerror="this.remove()" alt="{{setting($field['name'])}}"
                  style=" width: 90px; background: #eee; padding: 9px; border-radius: 6px; float: left; opacity: .5;">
@@ -64,7 +64,7 @@
         <input
                name="{{ $field['name'] }}"
                value="{{ old($field['name'], \setting($field['name'])) ?? @$field['value'] }}"
-               class="form-control {{ array_get( $field, 'class') }}"
+               class="form-control {{ Arr::get( $field, 'class') }}"
                id="{{ $field['name'] }}"
                placeholder="{{ $field['label'] }}">
     @endif

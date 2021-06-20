@@ -6,7 +6,7 @@
             <label for="{{ $name }}">{{ $label }}</label>
             <textarea type="{{ $field['type'] }}"
                       name="{{ $name }}" rows="4"
-                      class="form-control  @if($lang == 'ar') rtl text-right @endif {{ array_get( $field, 'class') }}"
+                      class="form-control  @if($lang == 'ar') rtl text-right @endif {{ Arr::get( $field, 'class') }}"
                       id="{{ $name }}"
                       placeholder="{{ $label }}">{{ old($name, \setting($field['name'],$lang)) }}</textarea>
 
@@ -19,7 +19,7 @@
         <label for="{{ $field['name'] }}">{{ $field['label'] }}</label>
         <textarea type="{{ $field['type'] }}"
                name="{{ $field['name'] }}" rows="4"
-               class="form-control  {{ array_get( $field, 'class') }}"
+               class="form-control  {{ Arr::get( $field, 'class') }}"
                id="{{ $field['name'] }}"
                placeholder="{{ $field['label'] }}">{{ old($field['name'], \setting($field['name'])) }}</textarea>
 
