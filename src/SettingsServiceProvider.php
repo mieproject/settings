@@ -32,7 +32,7 @@ class SettingsServiceProvider extends ServiceProvider
             __DIR__.'/config/setting_fields.php' , 'setting_fields'
         );
 
-        $this->loadViewsFrom(__DIR__.'/views', 'MIEsetting');
+        $this->loadViewsFrom(__DIR__.'/views', 'mie-setting');
 
         $this->loadRoutesFrom(__DIR__."/routes/web.php");
         $this->loadMigrationsFrom(__DIR__.'/migrations');

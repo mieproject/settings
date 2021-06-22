@@ -45,7 +45,7 @@
                                         <div class="card gradient-shadow">
                                             <div class="card-content">
                                                 @foreach($fields['elements'] as $field)
-                                                    @includeIf('dashboard.setting.fields.' . $field['type'] )
+                                                    @includeIf('mie-setting::fields.' . $field['type'] )
                                                 @endforeach
                                             </div>
 
