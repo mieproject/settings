@@ -4,5 +4,5 @@
     
 # url:
 `/admin/settings`
-#### try
+
 # use: `setting('key_name')`
