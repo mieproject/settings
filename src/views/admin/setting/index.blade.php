@@ -1,4 +1,4 @@
-@extends('layouts.contentLayoutMaster')
+@extends('mie-ui::layouts.contentLayoutMaster')
 
 @section('title', __('messages.menu.settings'))
 
