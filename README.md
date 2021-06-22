@@ -1,4 +1,4 @@
-# mieproject/settings
+# mieproject/settings V1.0
     composer require mieproject/settings
     
 # url:
