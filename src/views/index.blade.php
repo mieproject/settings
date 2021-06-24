@@ -1,6 +1,6 @@
 @extends('mie-ui::layouts.contentLayoutMaster')
 
-@section('title', __('messages.menu.settings'))
+@section('title', __('Settings'))
 
 @section('content')
     @if($errors->any())
